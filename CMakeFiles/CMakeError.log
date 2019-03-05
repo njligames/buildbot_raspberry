@@ -1,0 +1,858 @@
+Performing C SOURCE FILE Test HAVE_GCC_PREFERRED_STACK_BOUNDARY failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_25366/fast"
+/usr/bin/make -f CMakeFiles/cmTC_25366.dir/build.make CMakeFiles/cmTC_25366.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_25366.dir/src.c.o
+/usr/bin/cc   -DHAVE_GCC_PREFERRED_STACK_BOUNDARY -mpreferred-stack-boundary=2   -o CMakeFiles/cmTC_25366.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-mpreferred-stack-boundary=2’; did you mean ‘-mstructure-size-boundary=’?
+CMakeFiles/cmTC_25366.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_25366.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_25366.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_25366/fast' failed
+make: *** [cmTC_25366/fast] Error 2
+
+Source file was:
+int x = 0; int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_MMX failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_86798/fast"
+/usr/bin/make -f CMakeFiles/cmTC_86798.dir/build.make CMakeFiles/cmTC_86798.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_86798.dir/src.c.o
+/usr/bin/cc   -DHAVE_MMX -mmmx   -o CMakeFiles/cmTC_86798.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-mmmx’
+CMakeFiles/cmTC_86798.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_86798.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_86798.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_86798/fast' failed
+make: *** [cmTC_86798/fast] Error 2
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <mmintrin.h>
+          #endif
+          #else
+          #include <mmintrin.h>
+          #endif
+          #ifndef __MMX__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_3DNOW failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0cefa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0cefa.dir/build.make CMakeFiles/cmTC_0cefa.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0cefa.dir/src.c.o
+/usr/bin/cc   -DHAVE_3DNOW -m3dnow   -o CMakeFiles/cmTC_0cefa.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-m3dnow’
+CMakeFiles/cmTC_0cefa.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_0cefa.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_0cefa.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_0cefa/fast' failed
+make: *** [cmTC_0cefa/fast] Error 2
+
+Source file was:
+
+          #include <mm3dnow.h>
+          #ifndef __3dNOW__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) {
+            void *p = 0;
+            _m_prefetch(p);
+          }
+Performing C SOURCE FILE Test HAVE_SSE failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_76efb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_76efb.dir/build.make CMakeFiles/cmTC_76efb.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_76efb.dir/src.c.o
+/usr/bin/cc   -DHAVE_SSE -msse   -o CMakeFiles/cmTC_76efb.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-msse’; did you mean ‘-fdse’?
+CMakeFiles/cmTC_76efb.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_76efb.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_76efb.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_76efb/fast' failed
+make: *** [cmTC_76efb/fast] Error 2
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <xmmintrin.h>
+          #endif
+          #else
+          #include <xmmintrin.h>
+          #endif
+          #ifndef __SSE__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_FP_387 failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f6abe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f6abe.dir/build.make CMakeFiles/cmTC_f6abe.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f6abe.dir/src.c.o
+/usr/bin/cc   -DHAVE_FP_387   -mfpmath=387 -o CMakeFiles/cmTC_f6abe.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option '-mfpmath=387'
+CMakeFiles/cmTC_f6abe.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f6abe.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_f6abe.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f6abe/fast' failed
+make: *** [cmTC_f6abe/fast] Error 2
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_ALTIVEC_H_HDR failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1de59/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1de59.dir/build.make CMakeFiles/cmTC_1de59.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1de59.dir/src.c.o
+/usr/bin/cc   -DHAVE_ALTIVEC_H_HDR -maltivec   -o CMakeFiles/cmTC_1de59.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-maltivec’; did you mean ‘-mglibc’?
+CMakeFiles/cmTC_1de59.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_1de59.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_1de59.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1de59/fast' failed
+make: *** [cmTC_1de59/fast] Error 2
+
+Source file was:
+
+          #include <altivec.h>
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_ALTIVEC failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d909/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d909.dir/build.make CMakeFiles/cmTC_9d909.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d909.dir/src.c.o
+/usr/bin/cc   -DHAVE_ALTIVEC -maltivec   -o CMakeFiles/cmTC_9d909.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option ‘-maltivec’; did you mean ‘-mglibc’?
+CMakeFiles/cmTC_9d909.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_9d909.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_9d909.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9d909/fast' failed
+make: *** [cmTC_9d909/fast] Error 2
+
+Source file was:
+
+          vector unsigned int vzero() {
+              return vec_splat_u32(0);
+          }
+          int main(int argc, char **argv) { }
+Determining if the include file libunwind.h exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_36dd2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_36dd2.dir/build.make CMakeFiles/cmTC_36dd2.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_36dd2.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_36dd2.dir/CheckIncludeFile.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:23: fatal error: libunwind.h: No such file or directory
+ #include <libunwind.h>
+                       ^
+compilation terminated.
+CMakeFiles/cmTC_36dd2.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_36dd2.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_36dd2.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_36dd2/fast' failed
+make: *** [cmTC_36dd2/fast] Error 2
+
+
+Determining if the function strlcpy exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d50dd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d50dd.dir/build.make CMakeFiles/cmTC_d50dd.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d50dd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strlcpy   -o CMakeFiles/cmTC_d50dd.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d50dd
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d50dd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=strlcpy    CMakeFiles/cmTC_d50dd.dir/CheckFunctionExists.c.o  -o cmTC_d50dd 
+CMakeFiles/cmTC_d50dd.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `strlcpy'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d50dd.dir/build.make:86: recipe for target 'cmTC_d50dd' failed
+make[1]: *** [cmTC_d50dd] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d50dd/fast' failed
+make: *** [cmTC_d50dd/fast] Error 2
+
+
+Determining if the function strlcat exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d5f17/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d5f17.dir/build.make CMakeFiles/cmTC_d5f17.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d5f17.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=strlcat   -o CMakeFiles/cmTC_d5f17.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d5f17
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5f17.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=strlcat    CMakeFiles/cmTC_d5f17.dir/CheckFunctionExists.c.o  -o cmTC_d5f17 
+CMakeFiles/cmTC_d5f17.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `strlcat'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d5f17.dir/build.make:86: recipe for target 'cmTC_d5f17' failed
+make[1]: *** [cmTC_d5f17] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d5f17/fast' failed
+make: *** [cmTC_d5f17/fast] Error 2
+
+
+Determining if the function _strrev exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_43754/fast"
+/usr/bin/make -f CMakeFiles/cmTC_43754.dir/build.make CMakeFiles/cmTC_43754.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_43754.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_strrev   -o CMakeFiles/cmTC_43754.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_43754
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43754.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_strrev    CMakeFiles/cmTC_43754.dir/CheckFunctionExists.c.o  -o cmTC_43754 
+CMakeFiles/cmTC_43754.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_strrev'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_43754.dir/build.make:86: recipe for target 'cmTC_43754' failed
+make[1]: *** [cmTC_43754] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_43754/fast' failed
+make: *** [cmTC_43754/fast] Error 2
+
+
+Determining if the function _strupr exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9cb0e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9cb0e.dir/build.make CMakeFiles/cmTC_9cb0e.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9cb0e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_strupr   -o CMakeFiles/cmTC_9cb0e.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9cb0e
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9cb0e.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_strupr    CMakeFiles/cmTC_9cb0e.dir/CheckFunctionExists.c.o  -o cmTC_9cb0e 
+CMakeFiles/cmTC_9cb0e.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_strupr'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9cb0e.dir/build.make:86: recipe for target 'cmTC_9cb0e' failed
+make[1]: *** [cmTC_9cb0e] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9cb0e/fast' failed
+make: *** [cmTC_9cb0e/fast] Error 2
+
+
+Determining if the function _strlwr exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6c9a2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c9a2.dir/build.make CMakeFiles/cmTC_6c9a2.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c9a2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_strlwr   -o CMakeFiles/cmTC_6c9a2.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6c9a2
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c9a2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_strlwr    CMakeFiles/cmTC_6c9a2.dir/CheckFunctionExists.c.o  -o cmTC_6c9a2 
+CMakeFiles/cmTC_6c9a2.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_strlwr'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6c9a2.dir/build.make:86: recipe for target 'cmTC_6c9a2' failed
+make[1]: *** [cmTC_6c9a2] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6c9a2/fast' failed
+make: *** [cmTC_6c9a2/fast] Error 2
+
+
+Determining if the function itoa exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_da7cb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_da7cb.dir/build.make CMakeFiles/cmTC_da7cb.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_da7cb.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=itoa   -o CMakeFiles/cmTC_da7cb.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_da7cb
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da7cb.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=itoa    CMakeFiles/cmTC_da7cb.dir/CheckFunctionExists.c.o  -o cmTC_da7cb 
+CMakeFiles/cmTC_da7cb.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `itoa'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_da7cb.dir/build.make:86: recipe for target 'cmTC_da7cb' failed
+make[1]: *** [cmTC_da7cb] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_da7cb/fast' failed
+make: *** [cmTC_da7cb/fast] Error 2
+
+
+Determining if the function _ltoa exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3a2fe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3a2fe.dir/build.make CMakeFiles/cmTC_3a2fe.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3a2fe.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_ltoa   -o CMakeFiles/cmTC_3a2fe.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3a2fe
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a2fe.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_ltoa    CMakeFiles/cmTC_3a2fe.dir/CheckFunctionExists.c.o  -o cmTC_3a2fe 
+CMakeFiles/cmTC_3a2fe.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_ltoa'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3a2fe.dir/build.make:86: recipe for target 'cmTC_3a2fe' failed
+make[1]: *** [cmTC_3a2fe] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3a2fe/fast' failed
+make: *** [cmTC_3a2fe/fast] Error 2
+
+
+Determining if the function _uitoa exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_825dd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_825dd.dir/build.make CMakeFiles/cmTC_825dd.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_825dd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_uitoa   -o CMakeFiles/cmTC_825dd.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_825dd
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_825dd.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_uitoa    CMakeFiles/cmTC_825dd.dir/CheckFunctionExists.c.o  -o cmTC_825dd 
+CMakeFiles/cmTC_825dd.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_uitoa'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_825dd.dir/build.make:86: recipe for target 'cmTC_825dd' failed
+make[1]: *** [cmTC_825dd] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_825dd/fast' failed
+make: *** [cmTC_825dd/fast] Error 2
+
+
+Determining if the function _ultoa exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e2c93/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e2c93.dir/build.make CMakeFiles/cmTC_e2c93.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e2c93.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_ultoa   -o CMakeFiles/cmTC_e2c93.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e2c93
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2c93.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_ultoa    CMakeFiles/cmTC_e2c93.dir/CheckFunctionExists.c.o  -o cmTC_e2c93 
+CMakeFiles/cmTC_e2c93.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_ultoa'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e2c93.dir/build.make:86: recipe for target 'cmTC_e2c93' failed
+make[1]: *** [cmTC_e2c93] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e2c93/fast' failed
+make: *** [cmTC_e2c93/fast] Error 2
+
+
+Determining if the function _i64toa exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c8135/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c8135.dir/build.make CMakeFiles/cmTC_c8135.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8135.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_i64toa   -o CMakeFiles/cmTC_c8135.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c8135
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8135.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_i64toa    CMakeFiles/cmTC_c8135.dir/CheckFunctionExists.c.o  -o cmTC_c8135 
+CMakeFiles/cmTC_c8135.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_i64toa'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c8135.dir/build.make:86: recipe for target 'cmTC_c8135' failed
+make[1]: *** [cmTC_c8135] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c8135/fast' failed
+make: *** [cmTC_c8135/fast] Error 2
+
+
+Determining if the function _ui64toa exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_85bc4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85bc4.dir/build.make CMakeFiles/cmTC_85bc4.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85bc4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_ui64toa   -o CMakeFiles/cmTC_85bc4.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_85bc4
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85bc4.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_ui64toa    CMakeFiles/cmTC_85bc4.dir/CheckFunctionExists.c.o  -o cmTC_85bc4 
+CMakeFiles/cmTC_85bc4.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_ui64toa'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_85bc4.dir/build.make:86: recipe for target 'cmTC_85bc4' failed
+make[1]: *** [cmTC_85bc4] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_85bc4/fast' failed
+make: *** [cmTC_85bc4/fast] Error 2
+
+
+Determining if the function _stricmp exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4a2df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4a2df.dir/build.make CMakeFiles/cmTC_4a2df.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4a2df.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_stricmp   -o CMakeFiles/cmTC_4a2df.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4a2df
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a2df.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_stricmp    CMakeFiles/cmTC_4a2df.dir/CheckFunctionExists.c.o  -o cmTC_4a2df 
+CMakeFiles/cmTC_4a2df.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_stricmp'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4a2df.dir/build.make:86: recipe for target 'cmTC_4a2df' failed
+make[1]: *** [cmTC_4a2df] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4a2df/fast' failed
+make: *** [cmTC_4a2df/fast] Error 2
+
+
+Determining if the function _strnicmp exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_12d3b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_12d3b.dir/build.make CMakeFiles/cmTC_12d3b.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_12d3b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_strnicmp   -o CMakeFiles/cmTC_12d3b.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_12d3b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12d3b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_strnicmp    CMakeFiles/cmTC_12d3b.dir/CheckFunctionExists.c.o  -o cmTC_12d3b 
+CMakeFiles/cmTC_12d3b.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_strnicmp'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_12d3b.dir/build.make:86: recipe for target 'cmTC_12d3b' failed
+make[1]: *** [cmTC_12d3b] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_12d3b/fast' failed
+make: *** [cmTC_12d3b/fast] Error 2
+
+
+Determining if the function sysctlbyname exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ef2d6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ef2d6.dir/build.make CMakeFiles/cmTC_ef2d6.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ef2d6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sysctlbyname   -o CMakeFiles/cmTC_ef2d6.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ef2d6
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef2d6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sysctlbyname    CMakeFiles/cmTC_ef2d6.dir/CheckFunctionExists.c.o  -o cmTC_ef2d6 
+CMakeFiles/cmTC_ef2d6.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sysctlbyname'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ef2d6.dir/build.make:86: recipe for target 'cmTC_ef2d6' failed
+make[1]: *** [cmTC_ef2d6] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ef2d6/fast' failed
+make: *** [cmTC_ef2d6/fast] Error 2
+
+
+Determining if the function iconv_open exists in the iconv failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_517c7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_517c7.dir/build.make CMakeFiles/cmTC_517c7.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_517c7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=iconv_open   -o CMakeFiles/cmTC_517c7.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_517c7
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_517c7.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=iconv_open    CMakeFiles/cmTC_517c7.dir/CheckFunctionExists.c.o  -o cmTC_517c7 -liconv 
+/usr/bin/ld: cannot find -liconv
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_517c7.dir/build.make:86: recipe for target 'cmTC_517c7' failed
+make[1]: *** [cmTC_517c7] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_517c7/fast' failed
+make: *** [cmTC_517c7/fast] Error 2
+
+
+Determining if the function alloca exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fc06a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fc06a.dir/build.make CMakeFiles/cmTC_fc06a.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc06a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=alloca   -o CMakeFiles/cmTC_fc06a.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘alloca’
+/usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_fc06a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc06a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=alloca    CMakeFiles/cmTC_fc06a.dir/CheckFunctionExists.c.o  -o cmTC_fc06a 
+CMakeFiles/cmTC_fc06a.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `alloca'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fc06a.dir/build.make:86: recipe for target 'cmTC_fc06a' failed
+make[1]: *** [cmTC_fc06a] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fc06a/fast' failed
+make: *** [cmTC_fc06a/fast] Error 2
+
+
+Determining if the include file audio/audiolib.h exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5396c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5396c.dir/build.make CMakeFiles/cmTC_5396c.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5396c.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_5396c.dir/CheckIncludeFile.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: audio/audiolib.h: No such file or directory
+ #include <audio/audiolib.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTC_5396c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5396c.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_5396c.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5396c/fast' failed
+make: *** [cmTC_5396c/fast] Error 2
+
+
+Determining if the include file samplerate.h exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e3925/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e3925.dir/build.make CMakeFiles/cmTC_e3925.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e3925.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e3925.dir/CheckIncludeFile.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:24: fatal error: samplerate.h: No such file or directory
+ #include <samplerate.h>
+                        ^
+compilation terminated.
+CMakeFiles/cmTC_e3925.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_e3925.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_e3925.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e3925/fast' failed
+make: *** [cmTC_e3925/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_VIDEO_RPI failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_28484/fast"
+/usr/bin/make -f CMakeFiles/cmTC_28484.dir/build.make CMakeFiles/cmTC_28484.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_28484.dir/src.c.o
+/usr/bin/cc   -DHAVE_VIDEO_RPI  -I/opt/vc/include/interface/vmcs_host/linux/ -I/opt/vc/include/interface/vcos/pthreads -I/opt/vc/include  -L/opt/vc/lib   -o CMakeFiles/cmTC_28484.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c:2:30: fatal error: bcm_host.h: No such file or directory
+         #include <bcm_host.h>
+                              ^
+compilation terminated.
+CMakeFiles/cmTC_28484.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_28484.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_28484.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_28484/fast' failed
+make: *** [cmTC_28484/fast] Error 2
+
+Source file was:
+
+        #include <bcm_host.h>
+        int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_OPENGLES_V1 failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a98c1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a98c1.dir/build.make CMakeFiles/cmTC_a98c1.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a98c1.dir/src.c.o
+/usr/bin/cc   -DHAVE_VIDEO_OPENGLES_V1   -o CMakeFiles/cmTC_a98c1.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c:2:27: fatal error: GLES/gl.h: No such file or directory
+       #include <GLES/gl.h>
+                           ^
+compilation terminated.
+CMakeFiles/cmTC_a98c1.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_a98c1.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_a98c1.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a98c1/fast' failed
+make: *** [cmTC_a98c1/fast] Error 2
+
+Source file was:
+
+      #include <GLES/gl.h>
+      #include <GLES/glext.h>
+      int main (int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_VIVANTE_VDK failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_15839/fast"
+/usr/bin/make -f CMakeFiles/cmTC_15839.dir/build.make CMakeFiles/cmTC_15839.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_15839.dir/src.c.o
+/usr/bin/cc   -DHAVE_VIDEO_VIVANTE_VDK   -o CMakeFiles/cmTC_15839.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c:2:28: fatal error: gc_vdk.h: No such file or directory
+         #include <gc_vdk.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTC_15839.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_15839.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_15839.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_15839/fast' failed
+make: *** [cmTC_15839/fast] Error 2
+
+Source file was:
+
+        #include <gc_vdk.h>
+        int main(int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_VIDEO_VIVANTE_EGL_FB failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_34a09/fast"
+/usr/bin/make -f CMakeFiles/cmTC_34a09.dir/build.make CMakeFiles/cmTC_34a09.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34a09.dir/src.c.o
+/usr/bin/cc   -DHAVE_VIDEO_VIVANTE_EGL_FB   -o CMakeFiles/cmTC_34a09.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c:4:36: fatal error: EGL/eglvivante.h: No such file or directory
+         #include <EGL/eglvivante.h>
+                                    ^
+compilation terminated.
+CMakeFiles/cmTC_34a09.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_34a09.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_34a09.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_34a09/fast' failed
+make: *** [cmTC_34a09/fast] Error 2
+
+Source file was:
+
+        #define LINUX
+        #define EGL_API_FB
+        #include <EGL/eglvivante.h>
+        int main(int argc, char** argv) {}
+Determining if the include file fcitx/frontend.h exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_07675/fast"
+/usr/bin/make -f CMakeFiles/cmTC_07675.dir/build.make CMakeFiles/cmTC_07675.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_07675.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_07675.dir/CheckIncludeFile.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: fcitx/frontend.h: No such file or directory
+ #include <fcitx/frontend.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTC_07675.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_07675.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_07675.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_07675/fast' failed
+make: *** [cmTC_07675/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_INPUT_TSLIB failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6eb36/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6eb36.dir/build.make CMakeFiles/cmTC_6eb36.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6eb36.dir/src.c.o
+/usr/bin/cc   -DHAVE_INPUT_TSLIB   -o CMakeFiles/cmTC_6eb36.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c:2:27: fatal error: tslib.h: No such file or directory
+         #include "tslib.h"
+                           ^
+compilation terminated.
+CMakeFiles/cmTC_6eb36.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_6eb36.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_6eb36.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6eb36/fast' failed
+make: *** [cmTC_6eb36/fast] Error 2
+
+Source file was:
+
+        #include "tslib.h"
+        int main(int argc, char** argv) { }
+Determining if the function hid_init exists in the usbhid failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2623f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2623f.dir/build.make CMakeFiles/cmTC_2623f.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2623f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=hid_init   -o CMakeFiles/cmTC_2623f.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2623f
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2623f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=hid_init    CMakeFiles/cmTC_2623f.dir/CheckFunctionExists.c.o  -o cmTC_2623f -lusbhid 
+/usr/bin/ld: cannot find -lusbhid
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_2623f.dir/build.make:86: recipe for target 'cmTC_2623f' failed
+make[1]: *** [cmTC_2623f] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2623f/fast' failed
+make: *** [cmTC_2623f/fast] Error 2
+
+
+Determining if the include file usb.h exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_db212/fast"
+/usr/bin/make -f CMakeFiles/cmTC_db212.dir/build.make CMakeFiles/cmTC_db212.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db212.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_db212.dir/CheckIncludeFile.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:17: fatal error: usb.h: No such file or directory
+ #include <usb.h>
+                 ^
+compilation terminated.
+CMakeFiles/cmTC_db212.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_db212.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_db212.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_db212/fast' failed
+make: *** [cmTC_db212/fast] Error 2
+
+
+Determining if the include file libusb.h exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cab8c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cab8c.dir/build.make CMakeFiles/cmTC_cab8c.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cab8c.dir/CheckIncludeFile.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cab8c.dir/CheckIncludeFile.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:20: fatal error: libusb.h: No such file or directory
+ #include <libusb.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTC_cab8c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_cab8c.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_cab8c.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_cab8c/fast' failed
+make: *** [cmTC_cab8c/fast] Error 2
+
+
+Determining if the function hid_init exists in the usb failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c8873/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c8873.dir/build.make CMakeFiles/cmTC_c8873.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c8873.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=hid_init   -o CMakeFiles/cmTC_c8873.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c8873
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8873.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=hid_init    CMakeFiles/cmTC_c8873.dir/CheckFunctionExists.c.o  -o cmTC_c8873 -lusb 
+/usr/bin/ld: cannot find -lusb
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_c8873.dir/build.make:86: recipe for target 'cmTC_c8873' failed
+make[1]: *** [cmTC_c8873] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c8873/fast' failed
+make: *** [cmTC_c8873/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_USBHID failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_00dcb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_00dcb.dir/build.make CMakeFiles/cmTC_00dcb.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_00dcb.dir/src.c.o
+/usr/bin/cc   -DHAVE_USBHID   -o CMakeFiles/cmTC_00dcb.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c:10:34: fatal error: dev/usb/usb.h: No such file or directory
+         # include <dev/usb/usb.h>
+                                  ^
+compilation terminated.
+CMakeFiles/cmTC_00dcb.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_00dcb.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_00dcb.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_00dcb/fast' failed
+make: *** [cmTC_00dcb/fast] Error 2
+
+Source file was:
+
+       #include <sys/types.h>
+        #if defined(HAVE_USB_H)
+        #include <usb.h>
+        #endif
+        #ifdef __DragonFly__
+        # include <bus/usb/usb.h>
+        # include <bus/usb/usbhid.h>
+        #else
+        # include <dev/usb/usb.h>
+        # include <dev/usb/usbhid.h>
+        #endif
+        #if defined(HAVE_USBHID_H)
+        #include <usbhid.h>
+        #elif defined(HAVE_LIBUSB_H)
+        #include <libusb.h>
+        #elif defined(HAVE_LIBUSBHID_H)
+        #include <libusbhid.h>
+        #endif
+        int main(int argc, char **argv) {
+          struct report_desc *repdesc;
+          struct usb_ctl_report *repbuf;
+          hid_kind_t hidkind;
+          return 0;
+        }
+Performing C SOURCE FILE Test HAVE_PTHREAD_NP_H failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5043f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5043f.dir/build.make CMakeFiles/cmTC_5043f.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5043f.dir/src.c.o
+/usr/bin/cc   -DHAVE_PTHREAD_NP_H   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_5043f.dir/src.c.o   -c /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c
+/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp/src.c:3:34: fatal error: pthread_np.h: No such file or directory
+           #include <pthread_np.h>
+                                  ^
+compilation terminated.
+CMakeFiles/cmTC_5043f.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_5043f.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_5043f.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_5043f/fast' failed
+make: *** [cmTC_5043f/fast] Error 2
+
+Source file was:
+
+          #include <pthread.h>
+          #include <pthread_np.h>
+          int main(int argc, char** argv) { return 0; }
+Determining if the function pthread_set_name_np exists failed with the following output:
+Change Dir: /home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_20c65/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20c65.dir/build.make CMakeFiles/cmTC_20c65.dir/build
+make[1]: Entering directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_20c65.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_set_name_np   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_20c65.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.11/Modules/CheckFunctionExists.c
+Linking C executable cmTC_20c65
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20c65.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_set_name_np   -D_REENTRANT -pthread    CMakeFiles/cmTC_20c65.dir/CheckFunctionExists.c.o  -o cmTC_20c65 
+CMakeFiles/cmTC_20c65.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `pthread_set_name_np'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_20c65.dir/build.make:86: recipe for target 'cmTC_20c65' failed
+make[1]: *** [cmTC_20c65] Error 1
+make[1]: Leaving directory '/home/pirate/test_project_repo/buildbot_raspberry/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_20c65/fast' failed
+make: *** [cmTC_20c65/fast] Error 2
+
+
